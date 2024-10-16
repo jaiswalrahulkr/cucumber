@@ -42,6 +42,7 @@ public class TextBox {
         HelperPage.clickCollapse();
         Thread.sleep(5000);
         HelperPage.clickListElement("Text Box");
+        git
         test.pass("Clicked on TextBox Link.");
     }
 
