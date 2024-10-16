@@ -14,6 +14,9 @@ import java.time.Duration;
 public class DriverSetup {
     private static WebDriver driver;
 
+    private DriverSetup()
+    {}
+
     // Method to initialize WebDriver based on browser type
     public static WebDriver getDriver() {
         if (driver == null) {

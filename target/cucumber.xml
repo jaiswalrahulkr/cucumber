@@ -1,48 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="30.426"/>
-0.081">
-    <testcase classname="Unknown" name="Test the TextBox Functionality" time="8.416">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="11.763"/>
+1.149">
+    <testcase classname="Scroll Feature" name="Test the scroll fuctionality" time="9.084">
         <system-out>
-            <![CDATA[Given I open the Browser and navigate to the URL............................passed
-When I click on TextBox Link................................................passed
-And I enter "First Name" and "John" in the TextBox from the below...........passed
-Then click on Submit Button.................................................passed
+            <![CDATA[Given the user is on the login page.........................................passed
+When click on Home Button...................................................passed
+And Navigate to Home page...................................................passed
+Then Scroll to the bottom of the page.......................................passed
 ]]>
         </system-out>
     </testcase>
-    <testcase classname="Unknown" name="Test the TextBox Functionality 2" time="5.321">
+    <testcase classname="Scroll Feature" name="Test the Dropdown functionality" time="1.885">
         <system-out>
-            <![CDATA[Given I open the Browser and navigate to the URL............................passed
-When I click on TextBox Link................................................passed
-And I enter "Last Name" and "Doe" in the TextBox from the below.............passed
-Then click on Submit Button.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Unknown" name="Test the TextBox Functionality 3" time="5.47">
-        <system-out>
-            <![CDATA[Given I open the Browser and navigate to the URL............................passed
-When I click on TextBox Link................................................passed
-And I enter "Email" and "hghbj@gmail.com" in the TextBox from the below.....passed
-Then click on Submit Button.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Unknown" name="Test the TextBox Functionality 4" time="5.433">
-        <system-out>
-            <![CDATA[Given I open the Browser and navigate to the URL............................passed
-When I click on TextBox Link................................................passed
-And I enter "Current Address" and "1234567890" in the TextBox from the below.passed
-Then click on Submit Button.................................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Unknown" name="Test the TextBox Functionality 5" time="5.315">
-        <system-out>
-            <![CDATA[Given I open the Browser and navigate to the URL............................passed
-When I click on TextBox Link................................................passed
-And I enter "New Password" and "1234567890" in the TextBox from the below...passed
-Then click on Submit Button.................................................passed
+            <![CDATA[Given the user is on the login page.........................................passed
+When select the option2 from dropdown.......................................passed
+And check Option2 in checkbox...............................................passed
+Then select Radio2 from Radio list..........................................passed
 ]]>
         </system-out>
     </testcase>

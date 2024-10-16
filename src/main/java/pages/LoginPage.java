@@ -18,5 +18,6 @@ public class LoginPage {
         usernameField.sendKeys(username);
         passwordField.sendKeys(password);
         loginButton.click();
+
     }
 }

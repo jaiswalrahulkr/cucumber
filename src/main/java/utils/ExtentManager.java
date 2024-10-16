@@ -11,6 +11,7 @@ public class ExtentManager {
     public static ExtentReports getExtentReports() {
         if (extent == null) {
             ExtentSparkReporter spark = new ExtentSparkReporter("target/extent-reports/ExtentReport.html");
+            spark.config().setTimeStampFormat("MMM DD, YYYY, HH:MM:SS");
             extent = new ExtentReports();
             extent.attachReporter(spark);
         }

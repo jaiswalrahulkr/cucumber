@@ -1,23 +1,39 @@
 package utils;
 
 import com.aventstack.extentreports.ExtentTest;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.io.FileHandler;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.IOException;
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
+import java.util.NoSuchElementException;
 
 public class BaseTestClass {
     protected WebDriver driver;
     protected ExtentTest test;
+    protected JavascriptExecutor js;
 
-    // Method to initialize WebDriver (can be customized based on your setup)
+    protected WebDriverWait webDriverWait;
+    protected FluentWait<WebDriver> fluentWait;
+
+    protected BaseTestClass() {
+        driver = DriverSetup.getDriver();
+        webDriverWait=new WebDriverWait(driver, Duration.ofSeconds(10000));
+        fluentWait = new FluentWait<>(driver)
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofSeconds(2))
+                .ignoring(NoSuchElementException.class);
+        js=(JavascriptExecutor)driver;
+    }
+
+
+   /* // Method to initialize WebDriver (can be customized based on your setup)
     @BeforeClass
     public void setup() {
         driver = DriverSetup.getDriver();
@@ -30,7 +46,7 @@ public class BaseTestClass {
             driver.quit();
         }
         ExtentManager.flush();
-    }
+    }*/
 
     // Method to capture screenshot
     public String takeScreenshot(String testName) {
@@ -43,11 +59,6 @@ public class BaseTestClass {
             e.printStackTrace();
         }
         return dest;
-    }
-
-    public void implictWait() {
-        int time = Integer.parseInt(CommonMethods.readPropertiesFile("waitTime"));
-        driver.manage().timeouts().implicitlyWait(time, TimeUnit.SECONDS);
     }
 
     // Method to read data from Excel file
