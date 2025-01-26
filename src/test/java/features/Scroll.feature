@@ -3,7 +3,7 @@ Feature: Scroll Feature
   Background:
     Given the user is on the login page
 
-  @scroll @ignore
+  @scroll
   Scenario: Test the scroll fuctionality
     When click on Home Button
     And Navigate to Home page

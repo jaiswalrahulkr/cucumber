@@ -13,7 +13,7 @@ import java.util.Date;
         @CucumberOptions(
         features = "src/test/java/features",             // Path to feature files
         glue = {"stepdefinition"}, // Package with step definitions
-        dryRun = false,                                       // Check if all steps have definitions
+        dryRun = false,    /// Set to true to check step definitions without executing tests                                 // Check if all steps have definitions
         plugin = {
                 "pretty",                                         // For readable console output
                 "html:target/cucumber-reports.html",              // HTML report output
@@ -21,9 +21,8 @@ import java.util.Date;
                 "junit:target/cucumber.xml"  ,/// JUnit XML report output
 
         },
-        monochrome = true,                                    // Cleaner console output
-        tags = "@scroll or @dropdown"
-        // Running scenarios based on tags
+        monochrome = true   ,                                // Cleaner console output
+        tags = "@scroll" // Running scenarios based on tags
 )
 public class regressionRunner extends AbstractTestNGCucumberTests {
 

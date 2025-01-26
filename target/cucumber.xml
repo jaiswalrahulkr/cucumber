@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="11.763"/>
-1.149">
-    <testcase classname="Scroll Feature" name="Test the scroll fuctionality" time="9.084">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="13.685"/>
+2.588">
+    <testcase classname="Scroll Feature" name="Test the scroll fuctionality" time="12.33">
         <system-out>
             <![CDATA[Given the user is on the login page.........................................passed
 When click on Home Button...................................................passed
 And Navigate to Home page...................................................passed
 Then Scroll to the bottom of the page.......................................passed
-]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Scroll Feature" name="Test the Dropdown functionality" time="1.885">
-        <system-out>
-            <![CDATA[Given the user is on the login page.........................................passed
-When select the option2 from dropdown.......................................passed
-And check Option2 in checkbox...............................................passed
-Then select Radio2 from Radio list..........................................passed
 ]]>
         </system-out>
     </testcase>
