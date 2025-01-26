@@ -4,18 +4,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.edge.EdgeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 
 import java.time.Duration;
 
 public class DriverSetup {
     private static WebDriver driver;
 
-    private DriverSetup()
-    {}
+    private DriverSetup() {
+    }
 
     // Method to initialize WebDriver based on browser type
     public static WebDriver getDriver() {
@@ -26,6 +26,7 @@ public class DriverSetup {
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--start-maximized");
+                    chromeOptions.addArguments("--headless", "--disable-gpu");
                     driver = new ChromeDriver(chromeOptions);
                     break;
                 case "firefox":
