@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="13.685"/>
-2.588">
-    <testcase classname="Scroll Feature" name="Test the scroll fuctionality" time="12.33">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" time="7.22"/>
+"6.473">
+    <testcase classname="Scroll Feature" name="Test the scroll fuctionality" time="6.357">
         <system-out>
             <![CDATA[Given the user is on the login page.........................................passed
 When click on Home Button...................................................passed

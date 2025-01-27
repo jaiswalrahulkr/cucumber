@@ -26,7 +26,7 @@ public class DriverSetup {
                     WebDriverManager.chromedriver().setup();
                     ChromeOptions chromeOptions = new ChromeOptions();
                     chromeOptions.addArguments("--start-maximized");
-                    chromeOptions.addArguments("--headless", "--disable-gpu");
+                    //chromeOptions.addArguments("--headless", "--disable-gpu");
                     driver = new ChromeDriver(chromeOptions);
                     break;
                 case "firefox":
